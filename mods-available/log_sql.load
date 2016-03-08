@@ -1,0 +1,1 @@
+LoadModule log_sql_module /usr/lib/apache2/modules/mod_log_sql.so
