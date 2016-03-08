@@ -1,31 +1,22 @@
 <VirtualHost *:80>
 	ServerAdmin ahiliation@yahoo.co.in
-        ServerName  www.beautifulwork.org
-	ServerAlias beautifulwork.org
-<<<<<<< HEAD
-	DocumentRoot /var/www/html/beautifulwork
-=======
-	DocumentRoot /var/www/beautifulwork
->>>>>>> ec4979aee7da3faf1d5c3caabad2fe039bf02d40
-	ReadmeName   /apache/FOOTER.html
-	IndexStyleSheet "/apache/css/style.css"
+        ServerName  bugzilla.beautifulwork.org
+	DocumentRoot /var/www/bugzilla
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride All
 	</Directory>
-<<<<<<< HEAD
-	<Directory /var/www/html/beautifulwork>
-=======
 	<Directory /var/www/beautifulwork>
->>>>>>> ec4979aee7da3faf1d5c3caabad2fe039bf02d40
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny
 		allow from all
 	</Directory>
 
-	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
-	<Directory "/usr/lib/cgi-bin">
+#	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/var/www/bugzilla">
+		AddHandler cgi-script cgi
+		DirectoryIndex index.cgi
 		AllowOverride None
 		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
 		Order allow,deny

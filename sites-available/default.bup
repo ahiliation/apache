@@ -1,25 +1,13 @@
 <VirtualHost *:80>
 	ServerAdmin ahiliation@yahoo.co.in
-        ServerName  www.trueangle.org
-	ServerAlias trueangle.org
-<<<<<<< HEAD
-	DocumentRoot /var/www/html/trueangle
-	ReadmeName   /apache/FOOTER.html
-        IndexStyleSheet "/apache/css/style.css"
-=======
-	DocumentRoot /var/www/trueangle
->>>>>>> ec4979aee7da3faf1d5c3caabad2fe039bf02d40
+	DocumentRoot /var/www
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
-<<<<<<< HEAD
-	<Directory /var/www/html/trueangle>
-=======
-	<Directory /var/www/trueangle>
->>>>>>> ec4979aee7da3faf1d5c3caabad2fe039bf02d40
+	<Directory /var/www/>
 		Options Indexes FollowSymLinks MultiViews
-		AllowOverride All
+		AllowOverride None
 		Order allow,deny
 		allow from all
 	</Directory>
@@ -39,8 +27,4 @@
 	LogLevel warn
 
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
-<<<<<<< HEAD
 </VirtualHost>
-=======
-</VirtualHost>
->>>>>>> ec4979aee7da3faf1d5c3caabad2fe039bf02d40
